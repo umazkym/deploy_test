@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // Next.jsのLinkコンポーネントをインポート
 
 export default function Home() {
   return (
@@ -47,6 +48,16 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+
+        {/* 新しいページへの移動ボタン */}
+        <div className="mt-4">
+          <Link
+            href="/newpage" // 移動先のパス（例：src/app/newpage.tsx）
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center bg-blue-500 text-white hover:bg-blue-600 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+          >
+            Go to New Page
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
